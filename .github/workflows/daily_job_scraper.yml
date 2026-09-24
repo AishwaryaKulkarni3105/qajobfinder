@@ -10,8 +10,13 @@ jobs:
   run-scraper:
     runs-on: ubuntu-latest
 
+    env:
+      SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+      SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+      RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+
     permissions:
-      contents: write # Allows bot to commit updated CSV back to repo
+      contents: write
 
     steps:
       - name: Checkout Code
