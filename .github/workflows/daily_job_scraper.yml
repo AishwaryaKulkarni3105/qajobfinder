@@ -37,7 +37,7 @@ jobs:
           playwright install chromium --with-deps
 
       - name: Execute Scraper Script
-        run: python daily_job_finder.py
+        run: python dailyjob_finder.py
 
       - name: Commit and Push Updated Results
         run: |
