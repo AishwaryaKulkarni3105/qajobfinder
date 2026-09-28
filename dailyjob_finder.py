@@ -9,9 +9,36 @@ from email.mime.text import MIMEText
 import requests
 from playwright.async_api import async_playwright
 
-SENIORITY_KEYWORDS = ["senior", "sr", "lead", "sdet", "principal", "staff", "architect"]
-TECH_KEYWORDS = ["qa", "quality assurance", "automation", "playwright", "selenium", "rest assured", "api", "test"]
-EXCLUDE_KEYWORDS = ["junior", "jr", "intern", "entry", "trainee", "manual qa", "vp", "director"]
+QA_ROLE_PATTERN = re.compile(
+    r"\b(?:sdet|qa|quality assurance|software tester|software test(?:ing)? engineer|"
+    r"test automation|automation test(?:ing)?|automation qa|qa automation)\b",
+    re.IGNORECASE,
+)
+SENIOR_TITLE_PATTERN = re.compile(r"\b(?:senior|sr\.?|lead|principal|staff|sdet)\b", re.IGNORECASE)
+EXCLUDED_TITLE_PATTERN = re.compile(r"\b(?:junior|jr\.?|intern|entry[- ]level|trainee|vp|director)\b", re.IGNORECASE)
+EXPERIENCE_PATTERN = re.compile(
+    r"\b(\d+(?:\.\d+)?)\s*(?:\+|plus)?\s*(?:(?:-|to)\s*\d+(?:\.\d+)?\s*)?(?:years?|yrs?)\b",
+    re.IGNORECASE,
+)
+US_COUNTRY_PATTERN = re.compile(r"\b(?:united states(?: of america)?|u\.s\.a?\.?|usa)\b", re.IGNORECASE)
+US_REMOTE_PATTERN = re.compile(
+    r"\b(?:remote|based|residents?|candidates?|authorized to work|work authorization)"
+    r"[^.\n]{0,40}\b(?:u\.s\.?|us)\b|\b(?:u\.s\.?|us)[- ](?:only|based|remote|residents?)\b",
+    re.IGNORECASE,
+)
+US_ELIGIBILITY_PATTERN = re.compile(
+    r"\b(?:located|based|reside|residing|residents?|candidates?|authorized to work|"
+    r"eligible to work|must be located|work from)\b[^.\n]{0,60}\b"
+    r"(?:united states(?: of america)?|u\.s\.a?\.?|usa)\b|\b"
+    r"(?:united states(?: of america)?|u\.s\.a?\.?|usa)\b[^.\n]{0,60}\b"
+    r"(?:residents?|candidates?|only|remote|based|located)\b",
+    re.IGNORECASE,
+)
+PEORIA_AREA_CITIES = (
+    "peoria", "east peoria", "peoria heights", "morton", "washington", "pekin",
+    "bartonville", "dunlap", "chillicothe", "canton", "eureka", "elmwood",
+    "bloomington", "normal",
+)
 
 
 def normalize_text(value):
@@ -38,15 +65,41 @@ def format_posted_date(value):
 
 
 def is_senior_qa_match(title: str, description: str = "") -> bool:
-    combined = normalize_text(f"{title} {description}")
-    if not combined:
+    clean_title = normalize_text(title)
+    clean_description = normalize_text(description)
+    if not clean_title or EXCLUDED_TITLE_PATTERN.search(clean_title):
         return False
-    if any(ex in combined for ex in EXCLUDE_KEYWORDS):
+    if not QA_ROLE_PATTERN.search(clean_title):
         return False
-    has_seniority = any(s in combined for s in SENIORITY_KEYWORDS)
-    has_tech = any(t in combined for t in TECH_KEYWORDS)
-    has_qa_focus = "qa" in combined or "quality assurance" in combined or "automation" in combined or "sdet" in combined
-    return has_seniority and has_tech and has_qa_focus
+    required_years = [float(match.group(1)) for match in EXPERIENCE_PATTERN.finditer(clean_description)]
+    if required_years:
+        return 5 <= max(required_years) <= 9
+    return bool(SENIOR_TITLE_PATTERN.search(clean_title))
+
+
+def is_us_remote_or_peoria_area(job):
+    location = normalize_text(job.get("Location", ""))
+    postal_code_match = re.search(r"\b616\d{2}\b", location)
+    city_match = any(re.search(rf"\b{re.escape(city)}\b", location) for city in PEORIA_AREA_CITIES)
+    illinois_match = bool(re.search(r"\b(?:il|illinois)\b", location))
+    if postal_code_match or (city_match and (illinois_match or location.strip() in PEORIA_AREA_CITIES)):
+        return True
+
+    return is_us_remote_job(job)
+
+
+def is_us_remote_job(job):
+    location = normalize_text(job.get("Location", ""))
+    description = normalize_text(job.get("Description", ""))
+    source = normalize_text(job.get("Source", ""))
+    remote_source = source in {"remotive api", "remoteok", "jobicy", "weworkremotely"}
+    us_location = bool(
+        US_COUNTRY_PATTERN.search(location)
+        or US_REMOTE_PATTERN.search(location)
+        or location.strip() in {"us", "u.s.", "u.s.a.", "usa", "united states"}
+    )
+    us_eligibility = bool(US_ELIGIBILITY_PATTERN.search(description) or US_REMOTE_PATTERN.search(description))
+    return remote_source and (us_location or us_eligibility)
 
 
 def fetch_remotive_jobs():
@@ -173,7 +226,7 @@ async def scrape_weworkremotely():
                             "Source": "WeWorkRemotely",
                             "Company": company.strip(),
                             "Title": title.strip(),
-                            "Location": "Remote (US/Global)",
+                            "Location": "Remote (eligibility unverified)",
                             "Posted Date": datetime.today().strftime('%Y-%m-%d'),
                             "URL": f"https://weworkremotely.com{href}" if href and not href.startswith("http") else (href or ""),
                             "Description": content
@@ -216,7 +269,10 @@ def shortlist_jobs(jobs, max_jobs=10):
     for job in jobs:
         score = job_relevance_score(job.get("Title", ""), job.get("Description", ""))
         scored.append({**job, "Score": score})
-    scored.sort(key=lambda item: (item["Score"], item["Posted Date"]), reverse=True)
+    scored.sort(
+        key=lambda item: (is_us_remote_job(item), item["Score"], item["Posted Date"]),
+        reverse=True,
+    )
     return scored[:max_jobs]
 
 
@@ -282,7 +338,11 @@ async def main():
     arbeitnow_results = fetch_arbeitnow_jobs()
     wwr_results = await scrape_weworkremotely()
 
-    all_jobs = deduplicate_jobs(remotive_results + remoteok_results + jobicy_results + arbeitnow_results + wwr_results)
+    collected_jobs = remotive_results + remoteok_results + jobicy_results + arbeitnow_results + wwr_results
+    eligible_jobs = [job for job in collected_jobs if is_us_remote_or_peoria_area(job)]
+    all_jobs = deduplicate_jobs(eligible_jobs)
+    remote_count = sum(is_us_remote_job(job) for job in all_jobs)
+    peoria_count = len(all_jobs) - remote_count
 
     output_filename = "latest_remote_qa_jobs.csv"
     fieldnames = ["Source", "Company", "Title", "Location", "Posted Date", "URL", "Description"]
@@ -291,7 +351,7 @@ async def main():
         writer.writeheader()
         writer.writerows(all_jobs)
 
-    print(f"✅ Extracted {len(all_jobs)} unique jobs to CSV.")
+    print(f"✅ Extracted {len(all_jobs)} eligible jobs to CSV ({remote_count} U.S. remote, {peoria_count} Peoria-area).")
 
     shortlisted = shortlist_jobs(all_jobs)
     if shortlisted:

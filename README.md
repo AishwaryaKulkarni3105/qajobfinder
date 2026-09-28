@@ -11,6 +11,15 @@ A Python script that searches multiple public remote job sources for senior QA /
 - Saves the results to `latest_remote_qa_jobs.csv`
 - Optionally emails the top shortlisted jobs via Gmail SMTP
 
+## Search scope
+
+- Prioritizes remote roles explicitly open to candidates in the United States.
+- Includes Peoria-area roles as a secondary option, using ZIP codes beginning with `616` and nearby Illinois cities (approximately a 50-mile area).
+- Matches QA/SDET, senior or lead QA, automation testing, software tester, and software test engineering titles. When a posting states required experience, it keeps roles asking for 5–9 years; senior/lead titles with no stated years can still match.
+- Currently queries Remotive, RemoteOK, Jobicy, Arbeitnow, and We Work Remotely.
+
+LinkedIn, Indeed, and Dice are not currently queried. This script uses public APIs and accessible public listings; it does not sign in to or scrape account-protected job-board pages.
+
 ## Project structure
 
 - `dailyjob_finder.py` — main script
