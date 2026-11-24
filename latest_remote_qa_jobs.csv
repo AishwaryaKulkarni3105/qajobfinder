@@ -1,5 +1,174 @@
 Source,Company,Title,Location,Posted Date,URL,Description
-RemoteOK,Natera,"Lead, Office of Software Assurance",US Only,2026-11-22,https://remoteOK.com/remote-jobs/remote-lead-office-of-software-assurance-natera-1137940,"<h1><span><strong>Role Summary</strong></span></h1>
+RemoteOK,Natera,Sr. Forward Deployed Data Engineer,US Only,2026-11-24,https://remoteOK.com/remote-jobs/remote-sr-forward-deployed-data-engineer-natera-1137970,"<p><strong>POSITION SUMMARY:</strong><br /><br /><span>Natera is a global leader in cell-free DNA testing, serving patients across oncology, womenâs health, and organ health. Our Data &amp; AI organization builds the enterprise data platform and AI systems that turn clinical, genomic, and operational data into products that improve patient care and accelerate the business.</span></p>
+<p><span>We are looking for a Senior Forward Deployed Data Engineer to work directly with internal business stakeholders and domain teams to design, build, and deploy high-impact analytics and AI solutions. Reporting directly to the Data &amp; AI Engineering Tech Lead, you will act as the technical point-of-contact and primary builder for stakeholder initiatives, translating business needs into production-ready data and AI products. This is a hands-on, senior individual contributor role where you will write production code, develop semantic layers, and implement agentic workflows and LLM pipelines.</span></p>
+<p><span>As a forward deployed engineer, you are AI-native by designâusing AI coding harnesses and agentic tooling to accelerate development, testing, and documentation. You will partner closely with the Tech Lead to adopt foundational architecture patterns while rapidly delivering tailored solutions in a regulated environment where data quality, lineage, and privacy are essential.</span></p>
+<p><span>The ideal candidate combines strong engineering fundamentals with a customer-obsessed mindset, pragmatic problem-solving, and the communication skills needed to bridge complex technical solutions and business outcomes.</span></p>
+<p>Â </p>
+<h1><span><strong>Key Responsibilities</strong></span></h1>
+<h2><span><strong>Stakeholder Engagement &amp; Technical Ownership</strong></span></h2>
+<ul>
+<li><span>Embed closely with business stakeholders to deeply understand their data and AI requirements, serving as their primary technical advisor and engineer.</span></li>
+<li><span>Run launch discovery and impact analysis for new assays or products (models, views, dashboards touched), documented in Confluence and Jira.</span></li>
+<li><span>Translate complex business challenges into clear technical specs and deliverable milestones, partnering with the Tech Lead to align with enterprise architecture standards.</span></li>
+<li><span>Adhere to established engineering standards for pipeline design, data modeling, testing, version control (Git/GitLab branching, MRs, PRs) and CI/CD, ensuring deployed solutions are reliable and maintainable.</span></li>
+</ul>
+<h2><span><strong>Hands-On Solutions Engineering</strong></span></h2>
+<ul>
+<li><span>Design, build, and maintain scalable data pipelines and transformations on our cloud data platform, sourcing clinical, laboratory, operational, and commercial data to serve business analytics.</span></li>
+<li><span>Develop governed data models and semantic layers that power self-service analytics, dashboards, and data products (e.g., Patient 360, Provider 360, Test 360) for business teams.</span></li>
+<li><span>Develop AI solutions to enable business productivity and automation through use of agentic workflows, RAG/retrieval, and LLM pipelines (extraction/classification)</span></li>
+<li><span>Write production-grade SQL and Python; contribute to shared frameworks, templates, and tooling that let the team deliver new analytics solutions faster.</span></li>
+<li><span>Ensure the data layer supports performant, trustworthy analytics and LLM querying ; lead root-cause analysis on complex data issues and drive durable fixes.</span></li>
+</ul>
+<p>Â </p>
+<h2><span><strong>AI-Native Execution &amp; Continuous Learning</strong></span></h2>
+<ul>
+<li><span>Leverage AI coding assistants and agentic tools daily across the full software development lifecycle to accelerate solution development and deployment speed.</span></li>
+<li><span>Apply AI-native engineering best practicesâsuch as prompt engineering, agentic workflows, and automated testingâto maximize individual output while upholding high quality.</span></li>
+<li><span>Collaborate with the Tech Lead and peer engineers through code reviews, technical sharing, and feedback to continually refine forward deployed engineering practices.</span></li>
+</ul>
+<h2><span><strong>Data Quality, Reliability &amp; Compliance</strong></span></h2>
+<ul>
+<li><span>Implement data quality checks, contracts, lineage, and monitoring so that downstream consumers can trust the data by default.</span></li>
+<li><span>Own operational excellence for the teamâs solutions: SLAs, incident response, and cost efficiency of compute and storage.</span></li>
+<li><span>Ensure pipelines handling PHI and genomic data meet HIPAA, CLIA, and internal security and governance requirements, including access controls, auditability, and retention.</span></li>
+</ul>
+<h2><span><strong>Cross-Functional Partnership</strong></span></h2>
+<ul>
+<li><span>Work directly with business stakeholders across functions to understand their questions, shape analytics solutions to their needs, and communicate technical tradeoffs in plain language.</span></li>
+<li><span>Collaborate with core platform and AI teams under the guidance of the Tech Lead to build solutions on enterprise foundations rather than isolated silos.</span></li>
+<li><span>Represent the team in architecture forums, data governance discussions, and tool evaluations.</span></li>
+</ul>
+<p>Â </p>
+<h1><span><strong>Qualifications</strong></span></h1>
+<h2><span><strong>Required</strong></span></h2>
+<ul>
+<li><span>7+ years of data or software engineering experience, with a track record of forward-deployed or customer-facing engineering roles delivering analytics and AI solutions directly to stakeholders.</span></li>
+<li><span>Proven ability to partner directly with non-technical business partners, translate technical concepts clearly, and manage project deliverables.</span></li>
+<li><span>Demonstrated, hands-on use of AI coding assistants and agentic tools in daily engineering work, with a point of view on how to use them well.</span></li>
+<li><span>Expert-level SQL and strong Python, with a track record of shipping and operating production data pipelines and data models at scale.</span></li>
+<li><span>Deep experience with a modern cloud data warehouse and cloud infrastructure (Snowflake/AWS preferred).</span></li>
+<li><span>Hands-on experience with transformation frameworks (dbt or equivalent) and workflow orchestration (Airflow, Dagster, Prefect, or similar).</span></li>
+<li><span>1-2 years of practical background building with LLM frameworks (LangChain, LangGraph, or equivalent) alongside managed AI services and model routing gateways like Snowflake Cortex, AWS Bedrock, and foundational APIs.</span></li>
+<li><span>Strong grounding in analytical data modeling (dimensional or domain-driven), semantic layers, data quality engineering, and CI/CD for data systems.</span></li>
+</ul>
+<h2><span><strong>Preferred</strong></span></h2>
+<ul>
+<li><span>Experience in healthcare, life sciences, or another regulated domain handling PHI or other sensitive data.</span></li>
+<li><span>Experience with lab data management systems, lab informatics systems, bioinformatics pipelines is a plus</span></li>
+<li><span>Snowflake experience, including performance tuning, cost management, and features such as dynamic tables, Snowpark, or Cortex.</span></li>
+<li><span>Sigma experience, or experience with comparable BI and semantic-layer tools (Looker, Tableau, Power BI), and an understanding of how to design data models for self-service consumption.</span></li>
+<li><span>Working knowledge of Power BI, including dataset design, data source connectivity, and troubleshooting dashboards when upstream data changes.</span></li>
+<li><span>Experience building and operating agentic or LLM-based workflows within the data development lifecycle.</span></li>
+<li><span>Experience with infrastructure-as-code (Terraform) and data observability tooling.</span></li>
+<li><span>Experience integrating with Salesforce, laboratory information systems, or EHR data sources.</span></li>
+<li><span>Bachelorâs or Masterâs degree in Computer Science, Engineering, or a related quantitative field, or equivalent practical experience.</span></li>
+</ul><div><div><div>The pay range is listed and actual compensation packages are based on a wide array of factors unique to each candidate, including but not limited to skill set, years &amp; depth of experience, certifications and specific office location. This may differ in other locations due to cost of labor considerations.</div><div>Remote USA</div><div><span>$125,000</span><span>â</span><span>$156,300 USD</span></div></div></div><div><p><strong>OUR OPPORTUNITY</strong></p>
+<p>Nateraâ¢ is a global leader in cell-free DNA (cfDNA) testing, dedicated to oncology, womenâs health, and organ health. Our aim is to make personalized genetic testing and diagnostics part of the standard of care to protect health and enable earlier and more targeted interventions that lead to longer, healthier lives.</p>
+<p>The Natera team consists of highly dedicated statisticians, geneticists, doctors, laboratory scientists, business professionals, software engineers and many other professionals from world-class institutions, who care deeply for our work and each other. When you join Natera, youâll work hard and grow quickly. Working alongside the elite of the industry, youâll be stretched and challenged, and take pride in being part of a company that is changing the landscape of genetic disease management.</p>
+<p><strong>WHAT WE OFFER</strong></p>
+<p>Competitive Benefits - Employee benefits include comprehensive medical, dental, vision, life and disability plans for eligible employees and their dependents. Additionally, Natera employees and their immediate families receive free testing in addition to fertility care benefits. Other benefits include pregnancy and baby bonding leave, 401k benefits, commuter benefits and much more. We also offer a generous employee referral program!</p>
+<p>For more information, visit <a href=""http://www.natera.com/"">www.natera.com</a>.</p>
+<p>Natera is proud to be an Equal Opportunity Employer. We are committed to ensuring a diverse and inclusive workplace environment, and welcome people of different backgrounds, experiences, abilities and perspectives. Inclusive collaboration benefits our employees, our community and our patients, and is critical to our mission of changing the management of disease worldwide.</p>
+<p>All qualified applicants are encouraged to apply, and will be considered without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, age, veteran status, disability or any other legally protected status. We also consider qualified applicants regardless of criminal histories, consistent with applicable laws.</p>
+<p><em>If you are based in California, we encourage you to read this important information for California residents.Â </em></p>
+<p>Link: <a href=""https://www.natera.com/notice-of-data-collection-california-residents"">https://www.natera.com/notice-of-data-collection-california-residents/</a></p>
+<p>Please be advised that Natera will reach out to candidates with a @<a href=""http://natera.com/"">natera.com</a>Â email domain ONLY. Email communications from all other domain names are not from Natera or its employees and are fraudulent. Natera does not request interviews via text messages and does not ask for personal information until a candidate has engaged with the company and has spoken to a recruiter and the hiring team. Natera takes cyber crimes seriously, and will collaborate with law enforcement authorities to prosecute any related cyber crimes.</p>
+<p>For more information:<br />- <a href=""https://www.bbb.org/article/tips/12261-bbb-tip-employment-scams"">BBB announcement on job scams</a>Â <br />- <a href=""https://www.fbi.gov/investigate/cyber"">FBI Cyber Crime resource page</a>Â </p></div><br/><br/>Please mention the word **RECONCILIATION** and tag RMy40Mi4xNTcuMTMz when applying to show you read the job post completely (#RMy40Mi4xNTcuMTMz). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human."
+RemoteOK,Natera,Senior Clinical Trials Systems Manager,US Only,2026-11-24,https://remoteOK.com/remote-jobs/remote-senior-clinical-trials-systems-manager-natera-1137967,"<p>Â </p>
+<p><strong>POSITION SUMMARY:</strong></p>
+<p>Job Function: Clinical Operations</p>
+<p>Title: Senior Clinical Trial Systems Lead</p>
+<p>The Senior Clinical Trials Systems Lead serves as the business owner representative for Clinical Operations systems, such as CTMS and eTMF. This role defines business problems and intended use, facilitates the prioritization for system updates and enhancements, coordinates handoff to IT and product partners, reviews designs and prototypes iteratively, and coordinates user acceptance testing and go-live approval. This individual will work in partnership with IS&amp;T, Product, UI/UX, QA, Training, and the vendors who design, build, and validate outsourced systems. The role is also the day-to-day business point of contact for users and cross-functional teams, supporting troubleshooting, and continuous system improvements. The Senior Clinical Trials Systems Lead helps ensure that systems meet the requirements of study protocols, regulatory standards, business objectives, and user needs, and are fit for their intended use.</p>
+<p>Â </p>
+<p><strong>PRIMARY RESPONSIBILITIES:</strong></p>
+<ul>
+<li>
+<p>Partner directly with clinical science, quality, and regulatory teams to plan, test, and deploy new clinical systems and enhancements.</p>
+</li>
+<li>
+<p>Support system compliance with FDA, EMA, and ICH-GCP standards by defining GxP impact for all changes.</p>
+</li>
+<li>
+<p>Work closely with IS&amp;T, QA, and product teams to manage system integrations, upgrades, and vendor service levels.</p>
+</li>
+<li>
+<p>Document stakeholder requirements clearly, identify process gaps, and propose actionable solutions.</p>
+</li>
+<li>
+<p>Review system designs and prototypes iteratively, providing fast, direct feedback.</p>
+</li>
+<li>
+<p>Coordinate and execute user acceptance testing (UAT), documenting results to provide final business sign-off.</p>
+</li>
+<li>
+<p>Serve as the primary functional support contact for internal teams, troubleshooting issues and escalating technical blockers to IS&amp;T.</p>
+</li>
+<li>
+<p>Drive system adoption with clear communication so clinical teams experience minimal downtime during deployments.</p>
+</li>
+<li>
+<p>Lead the review of vendor updates and present targeted enhancement proposals.</p>
+</li>
+<li>
+<p>Adapt quickly to new challenges and take ownership of process gaps as they arise.</p>
+</li>
+</ul>
+<p><strong>QUALIFICATIONS:</strong></p>
+<ul>
+<li>
+<p>Bachelorâs Degree in a related field of study. PMP or Agile/product ownership certification preferred.</p>
+</li>
+<li>
+<p>8+ years of biotech or clinical research experience, including direct work with GxP-regulated systems (21 CFR Part 11, GAMP 5).</p>
+</li>
+<li>
+<p>Hands-on experience managing Clinical Systems (eTMF, CTMS, EDC).</p>
+</li>
+<li>
+<p>Experience with Salesforce-based systems as a business lead or product partner; Salesforce Administration is a plus.</p>
+</li>
+<li>
+<p>Proven ability to coordinate UAT and work with IT and Quality teams on computer system validation (CSV) and change control.</p>
+</li>
+<li>
+<p>Experience managing external software vendors and holding them to contracted service levels.</p>
+</li>
+</ul>
+<p><strong>KNOWLEDGE, SKILLS, AND ABILITIES:</strong></p>
+<ul>
+<li>
+<p>Deep understanding of Clinical Operations workflows and roles.</p>
+</li>
+<li>
+<p>Make fast, evidence-based decisions to keep assigned projects moving without waiting for rigid structures.</p>
+</li>
+<li>
+<p>Identify critical business risks early and communicate problems to leadership with proposed solutions.</p>
+</li>
+<li>
+<p>Use data and sound judgment to align cross-functional teams on critical system changes.</p>
+</li>
+<li>
+<p>High attention to detail with strong organization and time management skills.</p>
+</li>
+<li>
+<p>Ability to prioritize multiple projects in a fast-paced, product-driven environment.</p>
+</li>
+</ul>
+<p>Â </p><div><div><div>The pay range is listed and actual compensation packages are based on a wide array of factors unique to each candidate, including but not limited to skill set, years &amp; depth of experience, certifications and specific office location. This may differ in other locations due to cost of labor considerations.</div><div>Remote USA</div><div><span>$141,600</span><span>â</span><span>$177,000 USD</span></div></div></div><div><p><strong>OUR OPPORTUNITY</strong></p>
+<p>Nateraâ¢ is a global leader in cell-free DNA (cfDNA) testing, dedicated to oncology, womenâs health, and organ health. Our aim is to make personalized genetic testing and diagnostics part of the standard of care to protect health and enable earlier and more targeted interventions that lead to longer, healthier lives.</p>
+<p>The Natera team consists of highly dedicated statisticians, geneticists, doctors, laboratory scientists, business professionals, software engineers and many other professionals from world-class institutions, who care deeply for our work and each other. When you join Natera, youâll work hard and grow quickly. Working alongside the elite of the industry, youâll be stretched and challenged, and take pride in being part of a company that is changing the landscape of genetic disease management.</p>
+<p><strong>WHAT WE OFFER</strong></p>
+<p>Competitive Benefits - Employee benefits include comprehensive medical, dental, vision, life and disability plans for eligible employees and their dependents. Additionally, Natera employees and their immediate families receive free testing in addition to fertility care benefits. Other benefits include pregnancy and baby bonding leave, 401k benefits, commuter benefits and much more. We also offer a generous employee referral program!</p>
+<p>For more information, visit <a href=""http://www.natera.com/"">www.natera.com</a>.</p>
+<p>Natera is proud to be an Equal Opportunity Employer. We are committed to ensuring a diverse and inclusive workplace environment, and welcome people of different backgrounds, experiences, abilities and perspectives. Inclusive collaboration benefits our employees, our community and our patients, and is critical to our mission of changing the management of disease worldwide.</p>
+<p>All qualified applicants are encouraged to apply, and will be considered without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, age, veteran status, disability or any other legally protected status. We also consider qualified applicants regardless of criminal histories, consistent with applicable laws.</p>
+<p><em>If you are based in California, we encourage you to read this important information for California residents.Â </em></p>
+<p>Link: <a href=""https://www.natera.com/notice-of-data-collection-california-residents"">https://www.natera.com/notice-of-data-collection-california-residents/</a></p>
+<p>Please be advised that Natera will reach out to candidates with a @<a href=""http://natera.com/"">natera.com</a>Â email domain ONLY. Email communications from all other domain names are not from Natera or its employees and are fraudulent. Natera does not request interviews via text messages and does not ask for personal information until a candidate has engaged with the company and has spoken to a recruiter and the hiring team. Natera takes cyber crimes seriously, and will collaborate with law enforcement authorities to prosecute any related cyber crimes.</p>
+<p>For more information:<br />- <a href=""https://www.bbb.org/article/tips/12261-bbb-tip-employment-scams"">BBB announcement on job scams</a>Â <br />- <a href=""https://www.fbi.gov/investigate/cyber"">FBI Cyber Crime resource page</a>Â </p></div><br/><br/>Please mention the word **SAGELY** and tag RMy40Mi4xNTcuMTMz when applying to show you read the job post completely (#RMy40Mi4xNTcuMTMz). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human."
+RemoteOK,Natera,"Lead, Office of Software Assurance",US Only,2026-11-24,https://remoteOK.com/remote-jobs/remote-lead-office-of-software-assurance-natera-1137940,"<h1><span><strong>Role Summary</strong></span></h1>
 <p>Â </p>
 <p><span>The Office of Software Assurance (OSA) Lead is the senior individual contributor who establishes and leads the Office of Software Assurance, a new shift-left software quality function inside the Agile Office, through technical expertise and influence rather than line management. The OSA embeds right-sized, risk-based assurance into a 1,000+ person Engineering organization, so that compliance evidence is produced as a natural, tool-native output of how teams build, not assembled after the fact.</span></p>
 <p>Â </p>
@@ -76,8 +245,4 @@ RemoteOK,Natera,"Lead, Office of Software Assurance",US Only,2026-11-22,https://
 <p><em>If you are based in California, we encourage you to read this important information for California residents.Â </em></p>
 <p>Link: <a href=""https://www.natera.com/notice-of-data-collection-california-residents"">https://www.natera.com/notice-of-data-collection-california-residents/</a></p>
 <p>Please be advised that Natera will reach out to candidates with a @<a href=""http://natera.com/"">natera.com</a>Â email domain ONLY. Email communications from all other domain names are not from Natera or its employees and are fraudulent. Natera does not request interviews via text messages and does not ask for personal information until a candidate has engaged with the company and has spoken to a recruiter and the hiring team. Natera takes cyber crimes seriously, and will collaborate with law enforcement authorities to prosecute any related cyber crimes.</p>
-<p>For more information:<br />- <a href=""https://www.bbb.org/article/tips/12261-bbb-tip-employment-scams"">BBB announcement on job scams</a>Â <br />- <a href=""https://www.fbi.gov/investigate/cyber"">FBI Cyber Crime resource page</a>Â </p></div><br/><br/>Please mention the word **SPECTACULARLY** and tag RNC4yNDYuNjMuNTY= when applying to show you read the job post completely (#RNC4yNDYuNjMuNTY=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human."
-RemoteOK,Arbor Education,Senior Product Engineer,Remote,2026-11-22,https://remoteOK.com/remote-jobs/remote-senior-product-engineer-arbor-education-1137865,"<p>Location: Remote - UK</p><p>Salary: Â£70,000-80,000</p><p></p>About us<p>At Arbor, weâre on a mission to transform the way schools work for the better.Â <br /><br />We believe in a future of work in schools where being challenged doesnât mean being burnt out and overworked. Where data guides progress without overwhelming staff. And where everyone working in a school is reminded why they got into education every day.Â <br /><br />Our MIS and school management tools are already making a difference in over 7,000 schools and trusts. Giving time and power back to staff, turning data into clear, actionable insights, and supporting happier working days.Â <br /><br />At the heart of our brand is a recognition that the challenges schools face today arenât just about efficiency, outputs and productivity - but about creating happier working lives for the people who drive education everyday: the staff. We want to make schools more joyful places to work, as well as learn.Â About the role</p><p>We are looking for an experienced and driven Senior Product Engineer to join our Engineering team and help lead and drive the successful completion of high-impact features, specifically contributing to the advancement of Arbor products. The remit and focus of the role is to contribute towards the development of the companies core systems and processes, as well as implement strategies to enhance and optimise product quality and lead time across the entire team. Itâs a broad and exciting role, so weâre looking for someone up for a challenge - if youâre a collaborative and enthusiastic Engineer, this is the role for you.</p><p></p><p>Core responsibilities</p><ul><li>Work closely with the Engineering Manager, Tech Lead, QA Engineer, and Product Manager to help solutionise feature requests</li><li>Maintain software that ties together internal systems</li><li>Build software to centralise add-on purchases for the Arbor Platform</li><li>Lead the creation of detailed documentation for new feature developments, incorporating diagrams for comprehensive project understanding.</li><li>Drive the development and implementation of advanced tests around new features, ensuring the highest standards of test coverage and reliability.</li><li>Demonstrate expertise in producing well-architected, efficient, and scalable code using industry-leading design patterns and methodologies.</li><li>Take a leadership role in code reviews and pair programming sessions, guiding and mentoring colleagues towards excellence.</li><li>Lead and actively participate in tech-talks, workshops, and team-based learning initiatives, ensuring knowledge is disseminated effectively across the team.</li></ul>
-<p>About you</p><ul><li>Extensive and demonstrated experience with Object-Oriented languages and software development.</li><li>Considerable experience in software development, specifically with PHP</li><li>Demonstrable experience building back-end services in PHP</li><li>Significant experience working with third-party systems and APIs</li><li>Advanced understanding and application of best practices and software engineering principles, including SOLID, DRY, etc.</li><li>Significant database skills and expertise in relational database technologies.</li><li>Proactive problem-solving approach with a strategic mindset.</li><li>Leadership qualities demonstrated through collaboration and mentorship.</li><li>A team player, willing to muck in and help others when needed, driven personality who asks questions and actively participates in discussions</li><li>Good written and spoken English so you can present your ideas - our HQ is based in London</li></ul><p><br />Bonus skills</p><ul><li>Past experience with enterprise solutions and large-scale systems</li><li>Experience with React (or experience with Vue and willingness to learn React)</li><li>Familiarity with Scrum methodology or other agile development processes</li><li>Experience with cloud computing</li><li>Experience with Docker and containerisation</li><li>Familiarity with software best practices such as Refactoring, Clean Code, Domain-Driven Design, Test-Driven Development, etc.</li></ul>
-What we offer<p>The chance to work alongside a team of hard-working, passionate people in a role where youâll see the impact of your work everyday. We also offer:</p><ul><li>A dedicated wellbeing team who champion initiatives such as mindfulness, lunch n learns, manager training, mental health first aid training and much more!</li><li>30 days holiday (plus Bank Holidays). This is made up of 25 days annual leave plus 5 extra company wide days given over Easter, Summer &amp; Christmas</li><li>Life Assurance paid out at 3x annual salary</li><li>Comprehensive wellness benefit provided by AIG Smart Health, which provides a 24/7 virtual GP service, Mental health support, Counselling, and personalised Health ChecksÂ </li><li>Private Dental Insurance with BupaÂ </li><li>Salary sacrifice Pension provided by Scottish Widows</li><li>Enhanced maternity and adoption leave (20 weeks full pay) and paternity (6 weeks full pay) pay</li><li>5 free return to work maternity coaching sessions, helping you adapt to this new exciting time of life!</li><li>Access to services such as Calm and Bippit (financial wellbeing coaching)Â </li><li>All of our roles champion flexible working and we are happy to discuss what this means to you</li><li>Social committees that plan team, office and company wide events to bring people together and celebrate success</li><li>Dedicated professional development training budget (CPD courses, upskilling resources, professional memberships etc)</li><li>Volunteer with a charity of your choice for a day each year</li><li>Dog friendly offices!</li></ul><p></p><br />Interview process<li>Phone screen</li><li>1st stage</li><li>2nd stage</li><p></p><p>We are committed to a fair and comfortable recruitment process, so if you require any reasonable adjustments during your application or interview process, please reach out to a member of the team at careers@arbor-education.com.</p><p>Our commitment is also backed by our partnership with Neurodiversity Consultancy, Lexxic who provide us with training, support and advice.Â </p><br/><br/>Please mention the word **CONTRIBUTION** and tag RNC4yNDYuNjMuNTY= when applying to show you read the job post completely (#RNC4yNDYuNjMuNTY=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human."
-RemoteOK,Handspring,Mental Health Clinical Supervisor,New York,2026-11-22,https://remoteOK.com/remote-jobs/remote-mental-health-clinical-supervisor-handspring-1137862,"<p style=""min-height:1.5em""><strong>Who we are</strong></p><p style=""min-height:1.5em"">Handspring has set out to rebuild the pediatric behavioral health system from the ground up. We are a team of diverse and passionate individuals dedicated to making quality mental healthcare accessible to all young people.</p><p style=""min-height:1.5em""><strong>Weâre hiring a full-time, remote Clinical Supervisor to join our team. This role requires active, unrestricted licensure as an LCSW in New York.</strong></p><p style=""min-height:1.5em""></p><p style=""min-height:1.5em""><strong>About the role</strong></p><p style=""min-height:1.5em"">Handspring is a mission-driven, early-stage healthcare organization.</p><p style=""min-height:1.5em"">We are seeking a full-time Clinical Supervisor to join our team. As a Clinical Supervisor, you will oversee and support our team of therapists providing evidence-based CBT therapy. Your role involves providing clinical guidance, ensuring quality care, and fostering professional development among our therapists. You'll conduct individual supervision sessions, facilitate team consultations and offer risk consultations. This position offers the opportunity to shape our clinical approach and mentor therapists while improving mental health outcomes for young patients.</p><p style=""min-height:1.5em"">This is an opportunity to be a core part of a mission-driven organization that is looking to transform youth behavioral healthcare. You will work closely with Handspringâs Clinical Leadership.</p><p style=""min-height:1.5em""></p><p style=""min-height:1.5em""><strong>What youâll do</strong></p><ul style=""min-height:1.5em""><li><p style=""min-height:1.5em"">Oversee and provide clinical supervision to therapists. Conduct regular individual consultation sessions to ensure high-quality care and professional development</p></li><li><p style=""min-height:1.5em"">Facilitate group case consultations and lead team meetings to promote collaborative problem-solving and knowledge sharing</p></li><li><p style=""min-height:1.5em"">Review and provide feedback on clinical documentation to maintain best practices</p></li><li><p style=""min-height:1.5em"">Ensure therapists' compliance with safety protocols, documentation requirements, and ethical standards</p></li><li><p style=""min-height:1.5em"">Provide on-call risk consultation during daytime and evening clinic hours (on a rotating basis) for complex or crisis situations</p></li><li><p style=""min-height:1.5em"">Mentor and support therapists in their professional growth</p></li><li><p style=""min-height:1.5em"">Participate in quality assurance efforts, including regular chart audits and outcome measurements</p></li><li><p style=""min-height:1.5em"">Collaborate with the clinical leadership team to develop and implement new evidence-based treatment approaches and programs</p></li></ul><p style=""min-height:1.5em""></p><p style=""min-height:1.5em""><strong>What weâre looking for</strong></p><ul style=""min-height:1.5em""><li><p style=""min-height:1.5em""><strong>Active, unrestricted licensure as an LCSW in New York</strong></p></li><li><p style=""min-height:1.5em"">Licensed mental health professional with at least 10 years post-license experience providing psychotherapy, including 6+ years specifically in pediatric mental health</p></li><li><p style=""min-height:1.5em"">Experience with supervision and risk management in pediatric outpatient setting</p></li><li><p style=""min-height:1.5em"">Ability to work independently with an interest in collaboration and learning</p></li><li><p style=""min-height:1.5em"">Comfort with using and learning new technologies, including Zoom, Office, electronic health record systems, and other team collaboration tools</p></li><li><p style=""min-height:1.5em"">Extensive knowledge of CBT. Experience with other evidence-based models, such as DBT and/or behavioral parenting support &amp; training is a plus.</p></li><li><p style=""min-height:1.5em"">Experience supporting therapists in assessing and managing mild to moderate risk</p></li><li><p style=""min-height:1.5em"">Experience treating children, adolescents, and/or young adults with a range of diagnoses including depression, anxiety, trauma, OCD, behavioral challenges, and other diagnoses of childhood and adolescence</p></li></ul><p style=""min-height:1.5em""></p><p style=""min-height:1.5em""><strong>Position details</strong></p><ul style=""min-height:1.5em""><li><p style=""min-height:1.5em"">Full-time, remote position</p></li><li><p style=""min-height:1.5em"">Salary: $110,000 - $125,000; equity in Handspring</p></li><li><p style=""min-height:1.5em"">Full health benefits</p></li><li><p style=""min-height:1.5em"">You must be based in the United States and have U.S. work authorization</p></li></ul><p style=""min-height:1.5em""></p><p style=""min-height:1.5em""><strong>To ensure a fair and organized review process, we kindly ask that applicants do not reach out to team members directly regarding their application status.</strong></p><div style=""min-height:1.2em;margin-top:0px;margin-bottom:0px"">Â </div><br/><br/>Please mention the word **APPROPRIATE** and tag RNC4yNDYuNjMuNTY= when applying to show you read the job post completely (#RNC4yNDYuNjMuNTY=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human."
+<p>For more information:<br />- <a href=""https://www.bbb.org/article/tips/12261-bbb-tip-employment-scams"">BBB announcement on job scams</a>Â <br />- <a href=""https://www.fbi.gov/investigate/cyber"">FBI Cyber Crime resource page</a>Â </p></div><br/><br/>Please mention the word **SPECTACULARLY** and tag RMy40Mi4xNTcuMTMz when applying to show you read the job post completely (#RMy40Mi4xNTcuMTMz). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human."
